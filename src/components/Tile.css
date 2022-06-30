@@ -1,0 +1,116 @@
+/* impotrs */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+:root {
+    --line-height: 5px;
+    --line-width: 450%;
+    --left-positioning: -168.75%;
+}
+
+.tile {
+    min-width: 120px;
+    width: 10vw;
+    aspect-ratio: 1/1;
+    background-color: rgb(30, 30, 30);
+    color: white;
+
+    font-family: 'Raleway', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile .front {
+    font-size: calc(40px + 6vw);
+}
+
+/* horizontal line */
+
+.tile .horizontal-line {
+    position: relative;
+}
+
+.tile .horizontal-line::after {
+    content: '';
+    width: var(--line-width);
+    height: var(--line-height);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+}
+
+/* vertical line */
+
+.tile .vertical-line {
+    position: relative;
+}
+
+.tile .vertical-line::before {
+    content: '';
+    width: var(--line-width);
+    height: var(--line-height);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: var(--left-positioning);
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+    
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+}
+
+.tile .angle-left {
+    position: relative;
+}
+
+/* left angled */
+
+.tile .angle-left::before {
+    content: '';
+    width: var(--line-width);
+    height: var(--line-height);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: var(--left-positioning);
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+    
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+
+/* right angled */
+
+.tile .angle-right {
+    position: relative;
+}
+
+.tile .angle-right::before {
+    content: '';
+    width: var(--line-width);
+    height: var(--line-height);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: var(--left-positioning);
+    background-color: currentColor;
+    transform: translate(-50%, -50%);
+    
+    -webkit-transform:rotate(+45deg);
+    -moz-transform:rotate(+45deg);
+    -ms-transform:rotate(+45deg);
+    -o-transform:rotate(+45deg);
+    transform:rotate(+45deg);
+}

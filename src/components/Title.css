@@ -1,0 +1,16 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5em;
+
+    color: rgb(190, 190, 190);
+
+    z-index: 100;
+}
